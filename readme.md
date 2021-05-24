@@ -1,6 +1,6 @@
 # Buycoins coding challenge - Miracleio✨
 
-Coding challeng submission from [Miracle](https://github.com/miracleonyenma) for the Buycoins Frontend Engineer Application Coding challenge
+Coding challeng submission from [Miracleio](https://github.com/miracleonyenma) for the Buycoins Frontend Engineer Application Coding challenge
 
 ## Task Overview
 
