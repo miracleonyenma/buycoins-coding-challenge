@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,91 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./assets/script.js" defer></script>
 </head>
+
 <body>
     <main>
-        <section class="conatiner">
-            <h1>Hey ✨</h1>
+        <header class="header">
+            <div class="wrapper">
+                <div class="header-group">
+                    <form class="user-form">
+                        <div class="input-cont">
+                            <input type="search" name="user-search" id="user-search" placeholder="Find a user ✨">
+                        </div>
+                    </form>
+
+                    <ul class="tab-group">
+                        <li class="tab">
+                            Overview
+                        </li>
+                        <li class="tab active">
+                            <span>
+                                Repositories
+                            </span>
+                            <span class="tag">
+                                20
+                            </span>
+                        </li>
+                        <li class="tab">
+                            Projects
+                        </li>
+                        <li class="tab">
+                            Packages
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section class="container">
+            <div class="wrapper">
+                <aside class="profile-container">
+                    <figure class="profile">
+                        <div class="profile-img">
+                            <img class="img" src="./assets/img/character-mod1-2 (3).png" alt="User avatar">
+                        </div>
+                        <div class="details">
+                            <h2 class="profile-name">
+                                Miracle Onyenma
+                            </h2>
+                            <p class="profile-username">
+                                @miracleonyenma
+                            </p>
+                        </div>
+                    </figure>
+                    <p class="profile-description">
+                        Designer & developer in love with beautifully crafted designs
+                    </p>
+                </aside>
+                <section class="repos-container">
+                    <ul class="repos">
+                        <li class="repo">
+                            <header class="repo__header">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <h3 class="repo__name">
+                                        buycoins-coding-challenge
+                                    </h3>
+                                </a>
+                                <p class="repo__description">
+                                    Coding challenge submission from for the Buycoins Frontend Engineer Application
+                                    Coding challenge
+                                </p>
+
+                                <div class="repo__stats">
+                                    <span class="tech">HTML</span>
+                                    <span class="last-update">Updated 4 hours ago </span>
+                                </div>
+                            </header>
+                            <div class="repo__action">
+                                <button class="star-btn btn">
+                                    Star
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </section>
     </main>
 </body>
+
 </html>
