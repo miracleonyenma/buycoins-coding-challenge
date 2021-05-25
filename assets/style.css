@@ -52,8 +52,12 @@ a{
 
 h1,h2,h3,h4{
     margin-bottom: .25rem;
+    font-weight: 500;
 }
 
+p, span{
+    font-size: .85rem;
+}
 
 .wrapper{
     width: 100%;
@@ -112,12 +116,16 @@ h1,h2,h3,h4{
 }
 
 .tab-group{
-
+    white-space: nowrap;
+    width: 100%;
+    overflow: auto;
 }
 
 .tab-group .tab{
     display: inline-block;
     padding: .5rem 1rem;
+
+    cursor: pointer;
 }
 
 .tab .span{
@@ -128,13 +136,13 @@ h1,h2,h3,h4{
     padding: .1rem .5rem;
     background: var(--primary-border-dark);
     border-radius: 1rem;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     margin-left: .2rem;
 }
 
 .tab-group .tab.active{
-    border-bottom: 1px solid var(--primary-orange);
-    font-weight: bold;
+    border-bottom: 2px solid var(--primary-orange);
+    font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
@@ -190,6 +198,7 @@ h1,h2,h3,h4{
 
 .repo__name{
     color: var(--primary-blue);
+    /* font-size: larger; */
 }
 
 .repo__description{
@@ -198,13 +207,26 @@ h1,h2,h3,h4{
 
 .repo__stats{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
 }
 
 
 .repo__stats .tech{
+    position: relative;
+    padding-left: 1rem;
+}
 
+.repo__stats .tech::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-orange);
 }
 
 @media screen and (min-width: 768px) {
