@@ -8,6 +8,8 @@
     --primary-orange: #f9826c;
 
     --primary-dark: #24292e;
+    --secondary-dark: #353e46;
+
 
     --primary-light: #fff;
     --secondary-light: #f2f5f8;
@@ -47,7 +49,12 @@ button{
 
 a{
     text-decoration: none;
+    /* color: var(--primary-blue); */
+}
+
+a:hover{
     color: var(--primary-blue);
+    text-decoration: underline;
 }
 
 h1,h2,h3,h4{
@@ -55,8 +62,9 @@ h1,h2,h3,h4{
     font-weight: 500;
 }
 
-p, span{
-    font-size: .85rem;
+p, span, li, a{
+    font-size: .95rem;
+    color: inherit;
 }
 
 .wrapper{
@@ -75,6 +83,24 @@ p, span{
     background: var(--primary-border-dark);
 }
 
+.btn:active, .btn:focus{
+    /* border-color: var(--secondary-blue); */
+    background: var(--primary-border-dark);
+    box-shadow: 0 0 2px 4px var(--primary-border-dark);
+}
+
+.txt-bold{
+    font-weight: 600;
+}
+
+.show-md{
+    display: none;
+}
+@media  screen and (min-width:768px) {
+    .show-md{
+        display: block;
+    }
+}    
 .header {
     width: 100%;
     border-bottom: 1px solid var(--primary-border-dark);
@@ -100,7 +126,10 @@ p, span{
     padding: calc(var(--defVal) * 2) 0;
 }
 
-.input-cont {}
+.input-cont {
+    display: flex;
+    gap: 1em;
+}
 
 .input-cont input {
     width: 100%;
@@ -128,6 +157,16 @@ p, span{
     cursor: pointer;
 }
 
+.tab-group .tab:hover{
+    border-bottom: 2px solid var(--primary-border-dark);
+}
+
+.tab-group .tab.active{
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-orange);
+}
+
+
 .tab .span{
     vertical-align: middle;
 }
@@ -138,11 +177,6 @@ p, span{
     border-radius: 1rem;
     /* vertical-align: middle; */
     margin-left: .2rem;
-}
-
-.tab-group .tab.active{
-    border-bottom: 2px solid var(--primary-orange);
-    font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
@@ -158,6 +192,14 @@ p, span{
 
 .profile-container, .repos-container {
     padding: calc(var(--defVal) * 2);
+}
+
+.profile-container h1{
+    font-size: 1.65rem;
+}
+
+.profile-container p{
+    font-size: 1rem;
 }
 
 .profile {
@@ -179,6 +221,45 @@ p, span{
     object-fit: cover;
     width: 100%;
     height: auto;
+}
+
+.profile .profile-username{
+    opacity: .8;
+    font-size: 1.25rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: .65em;
+}
+
+.details p{
+}
+
+.others, .stats{
+    display: flex;
+    flex-direction: column;
+    gap: .35em;
+}
+
+.others{
+    order: 1;
+}
+
+.stats{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stats .stat{
+    /* margin-right: .65em; */
+    color: var(--secondary-dark);
+}
+
+.stats .stat > span{
+    color: var(--primary-dark);
 }
 
 .repos-container{
