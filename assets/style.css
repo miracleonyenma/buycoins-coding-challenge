@@ -1,18 +1,20 @@
 
 :root {
     --primary-blue: #006eed;
-    --secondary-blue: #54a3ff;
+    --secondary-blue: #66adff;
 
     --primary-green: #2ea44f;
 
     --primary-orange: #f9826c;
 
     --primary-dark: #24292e;
-    --secondary-dark: #353e46;
+    --secondary-dark: #424d57;
 
 
     --primary-light: #fff;
     --secondary-light: #f2f5f8;
+
+    --light-trans: rgba(255, 255, 255, 0.48);
 
 
     --primary-border-dark: rgba(36, 41, 46, 0.16);
@@ -31,7 +33,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     color: var(--primary-dark);
 }
 
@@ -53,13 +55,13 @@ a{
 }
 
 a:hover{
-    color: var(--primary-blue);
+    color: var(--primary-blue)!important;
     text-decoration: underline;
 }
 
 h1,h2,h3,h4{
     margin-bottom: .25rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 p, span, li, a{
@@ -85,7 +87,7 @@ p, span, li, a{
 
 .btn:active, .btn:focus{
     /* border-color: var(--secondary-blue); */
-    background: var(--primary-border-dark);
+    /* background: var(--primary-border-dark); */
     box-shadow: 0 0 2px 4px var(--primary-border-dark);
 }
 
@@ -96,14 +98,35 @@ p, span, li, a{
 .show-md{
     display: none;
 }
+
 @media  screen and (min-width:768px) {
     .show-md{
         display: block;
     }
-}    
+}
+
+.loader{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+[data-content="undefined"], [data-content="null"]{
+    display: none;
+}
+
+
 .header {
     width: 100%;
     border-bottom: 1px solid var(--primary-border-dark);
+    background-color: var(--light-trans);
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .header .wrapper, .container .wrapper{
@@ -140,8 +163,8 @@ p, span, li, a{
 }
 
 .input-cont input:focus {
-    border-color: var(--secondary-blue);
-    box-shadow: 0 0 8px 0px var(--secondary-blue);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 1px 4px var(--secondary-blue);
 }
 
 .tab-group{
@@ -152,7 +175,7 @@ p, span, li, a{
 
 .tab-group .tab{
     display: inline-block;
-    padding: .5rem 1rem;
+    padding: .8rem 1rem;
 
     cursor: pointer;
 }
@@ -192,6 +215,7 @@ p, span, li, a{
 
 .profile-container, .repos-container {
     padding: calc(var(--defVal) * 2);
+    position: relative;
 }
 
 .profile-container h1{
@@ -213,6 +237,7 @@ p, span, li, a{
 .profile-img {
     margin-bottom: var(--defVal);
     width: 20%;
+    z-index: 3;
 }
 
 .profile-img img{
@@ -223,9 +248,13 @@ p, span, li, a{
     height: auto;
 }
 
+.profile .profile-name, .profile .profile-username{
+    font-size: 1.65rem;
+}
+
 .profile .profile-username{
     opacity: .8;
-    font-size: 1.25rem;
+    font-weight: 1.25rem;
 }
 
 .details{
@@ -244,12 +273,12 @@ p, span, li, a{
 }
 
 .others{
-    order: 1;
+    order: 0;
 }
 
 .stats{
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 
@@ -262,6 +291,35 @@ p, span, li, a{
     color: var(--primary-dark);
 }
 
+@media screen and (min-width: 768px) {
+    .container .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: calc(var(--defVal) * 3);
+    }
+
+    .profile-container{
+        margin-top: -2.5rem;
+    }
+
+    .profile{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-img{
+        width: 100%;
+    }
+
+    .others{
+        order: 1;
+    }
+}
+
+
+
+
+/* REPO COMPONENTS */
 .repos-container{
 
 }
@@ -290,43 +348,20 @@ p, span, li, a{
     display: flex;
     gap: 1.5rem;
     margin-top: 1rem;
+    color: var(--secondary-dark);
 }
 
 
-.repo__stats .tech{
+.repo__stats .language{
     position: relative;
-    padding-left: 1rem;
 }
 
-.repo__stats .tech::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+.language .color{
     width: 10px;
     height: 10px;
     border-radius: 10px;
     background-color: var(--primary-orange);
-}
 
-@media screen and (min-width: 768px) {
-    .container .wrapper{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: calc(var(--defVal) * 3);
-    }
-
-    .profile-container{
-        margin-top: -2.5rem;
-    }
-
-    .profile{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .profile-img{
-        width: 100%;
-    }
+    display: inline-block;
+    margin-right: .25rem;
 }

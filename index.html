@@ -16,7 +16,7 @@
             <div class="wrapper">
                 <div class="header-group">
                     <div class="input-cont">
-                        <input type="text" name="user-search" id="user-search" placeholder="Find a user ✨">
+                        <input type="text" name="user-search" id="user-search" placeholder="Find a user ✨" required>
                         <button class="btn" type="submit" name="search-btn" id="search-btn">Search</button>
                     </div>
 
@@ -45,73 +45,13 @@
 
         <section class="container">
             <div class="wrapper">
-                <aside class="profile-container">
-                    <figure class="profile">
-                        <div class="profile-img">
-                            <img class="img" src="./assets/img/character-mod1-2 (3).png" alt="User avatar">
-                        </div>
-                        <div>
-                            <h1 class="profile-name">
-                                Miracle Onyenma
-                            </h1>
-                            <p class="profile-username">
-                                @miracleonyenma
-                            </p>
-                        </div> 
-                    </figure>
-                    <div class="details">
-                        <p class="profile-description">
-                            Designer & developer in love with beautifully crafted designs
-                        </p>
-                        <ul class="others">
-                            <li class="other">
-                                <a class="website-url" href="#" target="_blank" rel="noopener noreferrer">
-                                    https://www.ireaderinokun.com
-                                </a>
-                            </li>
-                            <li class="other show-md">
-                                <span class="org">
-                                    BuyCoins
-                                </span>
-                            </li>
-                            <li class="other show-md">
-                                <span class="location">
-                                    Lagos, Nigeria
-                                </span>
-                            </li>
-                            <li class="other show-md">
-                                <a class="twitter" href="#" target="_blank" rel="noopener noreferrer">
-                                    @ireaderinokun
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="stats">
-                            <a href="#" class="stat followers">
-                                <span class="txt-bold">
-                                    2.6k
-                                </span>
-                                followers
-                            </a>
-                            ·
-                            <a href="#" class="stat following">
-                                <span class="txt-bold">
-                                    28
-                                </span>
-                                following
-                            </a>
-                            ·
-                            <a href="#" class="stat stars">
-                                <span class="txt-bold">
-                                    250
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-
+                <aside id="profile-container" class="profile-container">
+                    <div id="profile-loader" class="loader">Loading...</div>
                 </aside>
-                <section class="repos-container">
-                    <ul class="repos">
-                        <li class="repo">
+                <section class="repos-container" id="repos-container">
+                    <div id="repo-loader" class="loader">
+                        Loading... by Olamide ft. Bella Shmurda
+                        <!-- <li class="repo">
                             <header class="repo__header">
                                 <a href="#" target="_blank" rel="noopener noreferrer">
                                     <h3 class="repo__name">
@@ -133,8 +73,8 @@
                                     Star
                                 </button>
                             </div>
-                        </li>
-                    </ul>
+                        </li> -->
+                    </div>
                 </section>
             </div>
         </section>
