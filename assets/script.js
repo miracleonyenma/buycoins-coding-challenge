@@ -289,7 +289,7 @@ const getUser = (username) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer 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"
+                "Authorization": "Bearer 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"
             },
             body: JSON.stringify({
                 query: `
