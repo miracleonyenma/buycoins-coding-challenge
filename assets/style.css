@@ -117,7 +117,6 @@ p, span, li, a{
     display: none;
 }
 
-
 .header {
     width: 100%;
     border-bottom: 1px solid var(--primary-border-dark);
@@ -364,4 +363,34 @@ p, span, li, a{
 
     display: inline-block;
     margin-right: .25rem;
+}
+
+.notif-bubble{
+    position: fixed;
+    min-width: 200px;
+    min-height: 40px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-orange);
+    border-radius: .2rem;
+    z-index: 4;
+
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.notif-bubble.active{
+    transform: translate(-50%, calc(100% + 1rem));
+}
+
+.err{
+    background: var(--primary-orange);
+}
+
+.success{
+    background: var(--primary-green);
+    color: var(--primary-light);
 }

@@ -10,12 +10,11 @@ let dummy = {
                 "id": "MDEwOlJlcG9zaXRvcnkyNDk4Mzk3MQ==",
                 "forkCount": 12,
                 "stargazerCount": 14,
-                "primaryLanguage" : null
-                // "primaryLanguage": {
-                //     "name": "JavaScript",
-                //     "id": "MDg6TGFuZ3VhZ2UxNDA=",
-                //     "color": "#f1e05a"
-                // }
+                "primaryLanguage": {
+                    "name": "JavaScript",
+                    "id": "MDg6TGFuZ3VhZ2UxNDA=",
+                    "color": "#f1e05a"
+                }
             },
             {
                 "description": "Testing different meta viewport tags",
@@ -77,9 +76,9 @@ let dummy = {
         "totalCount": 131
     },
     "bio": "Frontend Developer and User Interface Designer",
-    "avatarUrl": "https://avatars.githubusercontent.com/u/8677283?s=10&u=e350a331a44b704f86f56dca07ee44f1bc5675bb&v=4",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/8677283?s=300&u=e350a331a44b704f86f56dca07ee44f1bc5675bb&v=4",
     "followers": {
-        "totalCount": 2578
+        "totalCount": 2585
     },
     "following": {
         "totalCount": 28
@@ -90,17 +89,20 @@ let dummy = {
     "websiteUrl": "https://www.ireaderinokun.com",
     "twitterUsername": "ireaderinokun",
     "starredRepositories": {
-        "starredRepositories": 250
-    }
-};
+        "totalCount": 250
+    },
+    "company": "BuyCoins",
+    "location": "Lagos, Nigeria",
+    "status": null
+}
 
 
 // HELPER FUNCTIONS
 
 // replace element
-const replaceElement = (newTemplate, {elementParent : elementParent, oldElement : oldElement}, template = true) => {
+const replaceElement = (newTemplate, { elementParent: elementParent, oldElement: oldElement }, template = true) => {
     let newElement = newTemplate;
-    if(template){
+    if (template) {
         newElement = document.createRange().createContextualFragment(newTemplate);
     }
     console.log(elementParent);
@@ -108,14 +110,28 @@ const replaceElement = (newTemplate, {elementParent : elementParent, oldElement 
     console.log(newElement);
     oldElement ? elementParent.replaceChild(newElement, oldElement) : null;
 }
-
+// return "safe" obj
 const safe = (data) => {
     let safeData;
-    data ? safeData = data : safeData = {data : null}
+    data ? safeData = data : safeData = { data: null }
 
     return safeData
 }
+// custom error handler
+const showError = ({status = "err", msg = "Oops.. Something went wrong"})=>{
+    let notifBubble = document.querySelector("#notif-bubble");
+    let msgTemplate = /*html*/`<span> ${msg} </span>`
+    replaceElement(msgTemplate, {elementParent: notifBubble, oldElement: notifBubble.firstElementChild})
+    status == "err" ? notifBubble.classList.add("err") : notifBubble.classList.add("success");
+    notifBubble.classList.add("active")
+    
+    setTimeout(()=>{
+        notifBubble.classList.remove("active")
+        notifBubble.classList.remove(status)
+    }, 4000)
+}
 
+// GLOBAL TEMPLATES
 
 // loader template
 const profileLoader = /*html*/`
@@ -125,15 +141,23 @@ const repoLoader = /*html*/`
     <div id="repo-loader" class="loader">Loading... by Olamide ft. Bella Shmurda</div>
 `;
 
+// populate custom elements
+const populateCustom = (selector, data) => {
+    let el = document.querySelector(selector);
+    el.textContent = data;
+};
+
+
+
 // populate profile
-const populateProfile = ({container, loader}, data) => {
-    
+const populateProfile = ({ container, loader }, data) => {
+
     // profile Template
     const profileTemplate = /*html*/`
         <div class="">
             <figure class="profile">
                 <div class="profile-img">
-                    <img class="img" src="${data.avatarUrl}" alt="User avatar">
+                    <img class="img" src="./assets/img/character-mod1-2 (3).png" srcset="${data.avatarUrl}" alt="User avatar">
                 </div>
                 <div>
                     <h1 class="profile-name" data-content="${data.name}">
@@ -195,16 +219,16 @@ const populateProfile = ({container, loader}, data) => {
         </div>
     `;
     // replace element
-    replaceElement(profileTemplate, {elementParent: container, oldElement: loader});
+    replaceElement(profileTemplate, { elementParent: container, oldElement: loader });
 
 };
 
 // populate repos
-const populateRepos = ({container, loader}, data) => {
+const populateRepos = ({ container, loader }, data) => {
     let repos = data.repositories.nodes;
     let newRepoList = document.createElement("ul");
     newRepoList.classList.add("repos");
-    
+
     repos.forEach(repo => {
         // repo template
         const repoTemplate = /*html*/`
@@ -242,22 +266,22 @@ const populateRepos = ({container, loader}, data) => {
     console.log(newRepoList);
 
     // replace repos element
-    replaceElement(newRepoList, {elementParent: container, oldElement: loader}, false)
+    replaceElement(newRepoList, { elementParent: container, oldElement: loader }, false)
 }
 
-// populate profile
+// populate Elements
 const populateElements = (profileParent, repoParent, data) => {
     // profile
     let profileContainer = document.querySelector(profileParent);
     let profileLoader = profileContainer.querySelector("#profile-loader");
 
-    populateProfile({container: profileContainer, loader: profileLoader}, data);
-    
+    populateProfile({ container: profileContainer, loader: profileLoader }, data);
+
     // repo
     let repoContainer = document.querySelector(repoParent);
     let repoLoader = repoContainer.querySelector("#repo-loader");
 
-    populateRepos({container: repoContainer, loader: repoLoader}, data)
+    populateRepos({ container: repoContainer, loader: repoLoader }, data)
 }
 
 // get user info
@@ -289,60 +313,75 @@ const getUser = (username) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer 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"
+                "Authorization": "Bearer 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"
             },
             body: JSON.stringify({
                 query: `
                     {
                         user(login: "${login}") {
-                        name
-                        repositories(first: 5) {
-                            nodes {
-                            description
                             name
-                            url
-                            updatedAt
-                            id
-                            forkCount
-                            stargazerCount
-                            primaryLanguage {
+                            repositories(first: 5) {
+                            nodes {
+                                description
+                                name
+                                url
+                                updatedAt
+                                id
+                                forkCount
+                                stargazerCount
+                                primaryLanguage {
                                 name
                                 id
                                 color
+                                }
                             }
+                            totalCount
                             }
+                            bio
+                            avatarUrl(size: 300)
+                            followers {
                             totalCount
-                        }
-                        bio
-                        avatarUrl(size: 300)
-                        followers {
+                            }
+                            following {
                             totalCount
-                        }
-                        following {
+                            }
+                            id
+                            login
+                            url
+                            websiteUrl
+                            twitterUsername
+                            starredRepositories {
                             totalCount
-                        }
-                        id
-                        login
-                        url
-                        websiteUrl
-                        twitterUsername
-                        starredRepositories {
-                            totalCount
-                        }
+                            }
+                            company
+                            location
+                            status {
+                            emoji
+                            message
+                            }
                         }
                     }
                 `
             })
         }).then(res => res.json())
-        .then(data => {
-            data = data.data.user;
-            console.log(data)
-            populateElements("#profile-container", "#repos-container", data);
-        })
-        .catch(err => {
-            console.log(err);
-            populateElements("#profile-container", "#repos-container", dummy);
-        })
+            .then(data => {
+                data = data.data.user;
+                console.log(data)
+                populateElements("#profile-container", "#repos-container", data);
+                showError({status: "success", msg: `Success! ✨  Rendering data for ${login}`})
+
+                // get repoCount
+                let repoCount = data.repositories.totalCount;
+                populateCustom("#repoCount", repoCount);
+            })
+            .catch(err => {
+                console.log(err);
+                showError({status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev`})
+                populateElements("#profile-container", "#repos-container", dummy);
+                // get repoCount
+                let repoCount = dummy.repositories.totalCount;
+                populateCustom("#repoCount", repoCount);
+            })
     }
 
     return {
@@ -357,11 +396,12 @@ searchBtn.addEventListener("click", (e) => {
     let error = getUser(input.value);
     console.log(error);
     !error.status ? input.value = "" : null
-})
+});
+
 input.addEventListener("keyup", (e) => {
     if (e.keyCode == "13") {
         e.preventDefault();
 
         searchBtn.click();
     }
-})
+});
