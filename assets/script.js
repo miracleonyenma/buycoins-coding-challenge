@@ -3,13 +3,41 @@ let dummy = {
     "repositories": {
         "nodes": [
             {
+                "description": "A free theme for Jekyll",
+                "name": "bitsofcode-jekyll",
+                "url": "https://github.com/ireade/bitsofcode-jekyll",
+                "updatedAt": "2021-05-28T09:10:34Z",
+                "id": "MDEwOlJlcG9zaXRvcnkzNTcyODk3Ng==",
+                "forkCount": 0,
+                "stargazerCount": 2,
+                "primaryLanguage": {
+                    "name": "CSS",
+                    "id": "MDg6TGFuZ3VhZ2UzMDg=",
+                    "color": "#563d7c"
+                }
+            },
+            {
+                "description": "A hackable css form reset",
+                "name": "formhack",
+                "url": "https://github.com/ireade/formhack",
+                "updatedAt": "2021-05-28T07:46:15Z",
+                "id": "MDEwOlJlcG9zaXRvcnkzNDQ4MTIxNg==",
+                "forkCount": 22,
+                "stargazerCount": 345,
+                "primaryLanguage": {
+                    "name": "CSS",
+                    "id": "MDg6TGFuZ3VhZ2UzMDg=",
+                    "color": "#563d7c"
+                }
+            },
+            {
                 "description": "A simple JS and jQuery game of tic tac toe",
                 "name": "tictactoe",
                 "url": "https://github.com/ireade/tictactoe",
-                "updatedAt": "2021-05-23T08:21:20Z",
+                "updatedAt": "2021-05-27T20:35:48Z",
                 "id": "MDEwOlJlcG9zaXRvcnkyNDk4Mzk3MQ==",
                 "forkCount": 12,
-                "stargazerCount": 14,
+                "stargazerCount": 15,
                 "primaryLanguage": {
                     "name": "JavaScript",
                     "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -17,27 +45,13 @@ let dummy = {
                 }
             },
             {
-                "description": "Testing different meta viewport tags",
-                "name": "viewports",
-                "url": "https://github.com/ireade/viewports",
-                "updatedAt": "2020-07-14T15:46:19Z",
-                "id": "MDEwOlJlcG9zaXRvcnkzMjY3MzUwNg==",
+                "description": "Blockchain Nanodegree Capstone Project - Real Estate Marketplace",
+                "name": "nd1309-real-estate-marketplace",
+                "url": "https://github.com/ireade/nd1309-real-estate-marketplace",
+                "updatedAt": "2021-05-27T11:29:47Z",
+                "id": "MDEwOlJlcG9zaXRvcnkyMDU3MjU2Mjc=",
                 "forkCount": 1,
-                "stargazerCount": 3,
-                "primaryLanguage": {
-                    "name": "HTML",
-                    "id": "MDg6TGFuZ3VhZ2U0MTc=",
-                    "color": "#e34c26"
-                }
-            },
-            {
-                "description": "A small web app made with the Instagram API",
-                "name": "tagr",
-                "url": "https://github.com/ireade/tagr",
-                "updatedAt": "2017-05-06T01:08:59Z",
-                "id": "MDEwOlJlcG9zaXRvcnkzMzE0ODk0Mg==",
-                "forkCount": 1,
-                "stargazerCount": 3,
+                "stargazerCount": 4,
                 "primaryLanguage": {
                     "name": "JavaScript",
                     "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -45,31 +59,17 @@ let dummy = {
                 }
             },
             {
-                "description": "An Instagram based web app that lets you find people you follow that don't follow back",
-                "name": "payback",
-                "url": "https://github.com/ireade/payback",
-                "updatedAt": "2020-01-14T10:56:51Z",
-                "id": "MDEwOlJlcG9zaXRvcnkzMzM1Njk1Mg==",
-                "forkCount": 0,
-                "stargazerCount": 5,
+                "description": "A simple demo application of Web Push Notifications with Firebase",
+                "name": "simply-notify",
+                "url": "https://github.com/ireade/simply-notify",
+                "updatedAt": "2021-05-26T23:22:49Z",
+                "id": "MDEwOlJlcG9zaXRvcnkxMDM1MTA2MDE=",
+                "forkCount": 61,
+                "stargazerCount": 121,
                 "primaryLanguage": {
-                    "name": "CSS",
-                    "id": "MDg6TGFuZ3VhZ2UzMDg=",
-                    "color": "#563d7c"
-                }
-            },
-            {
-                "description": "Lynda.com course 'Building a Data-Driven App with AngularJS'",
-                "name": "angulardata",
-                "url": "https://github.com/ireade/angulardata",
-                "updatedAt": "2015-04-03T15:17:44Z",
-                "id": "MDEwOlJlcG9zaXRvcnkzMzM2MzI3Mg==",
-                "forkCount": 0,
-                "stargazerCount": 0,
-                "primaryLanguage": {
-                    "name": "CSS",
-                    "id": "MDg6TGFuZ3VhZ2UzMDg=",
-                    "color": "#563d7c"
+                    "name": "JavaScript",
+                    "id": "MDg6TGFuZ3VhZ2UxNDA=",
+                    "color": "#f1e05a"
                 }
             }
         ],
@@ -78,7 +78,7 @@ let dummy = {
     "bio": "Frontend Developer and User Interface Designer",
     "avatarUrl": "https://avatars.githubusercontent.com/u/8677283?s=300&u=e350a331a44b704f86f56dca07ee44f1bc5675bb&v=4",
     "followers": {
-        "totalCount": 2585
+        "totalCount": 2586
     },
     "following": {
         "totalCount": 28
@@ -118,7 +118,7 @@ const safe = (data) => {
     return safeData
 }
 // custom error handler
-const showError = ({status = "err", msg = "Oops.. Something went wrong"})=>{
+const showNotif = ({status = "err", msg = "Oops.. Something went wrong"})=>{
     let notifBubble = document.querySelector("#notif-bubble");
     let msgTemplate = /*html*/`<span> ${msg} </span>`
     replaceElement(msgTemplate, {elementParent: notifBubble, oldElement: notifBubble.firstElementChild})
@@ -128,7 +128,7 @@ const showError = ({status = "err", msg = "Oops.. Something went wrong"})=>{
     setTimeout(()=>{
         notifBubble.classList.remove("active")
         notifBubble.classList.remove(status)
-    }, 4000)
+    }, 6000)
 }
 
 // GLOBAL TEMPLATES
@@ -173,29 +173,34 @@ const populateProfile = ({ container, loader }, data) => {
                     ${data.bio}
                 </p>
                 <ul class="others">
-                    <li class="other" data-content="${data.url}">
-                        <a class="website-url" href="${data.url}" target="_blank" rel="noopener noreferrer">
-                            ${data.url}
+                    <li class="other" data-content="${data.websiteUrl}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-link" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"/></svg>
+                        <a class="website-url" href="${data.websiteUrl}" target="_blank" rel="noopener noreferrer">
+                            ${data.websiteUrl}
                         </a>
                     </li>
                     <li class="other show-md" data-content="${data.org}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-organization" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.5 14.25c0 .138.112.25.25.25H4v-1.25a.75.75 0 01.75-.75h2.5a.75.75 0 01.75.75v1.25h2.25a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25h-8.5a.25.25 0 00-.25.25v12.5zM1.75 16A1.75 1.75 0 010 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 00.25-.25V8.285a.25.25 0 00-.111-.208l-1.055-.703a.75.75 0 11.832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0114.25 16h-3.5a.75.75 0 01-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 01-.75-.75V14h-1v1.25a.75.75 0 01-.75.75h-3zM3 3.75A.75.75 0 013.75 3h.5a.75.75 0 010 1.5h-.5A.75.75 0 013 3.75zM3.75 6a.75.75 0 000 1.5h.5a.75.75 0 000-1.5h-.5zM3 9.75A.75.75 0 013.75 9h.5a.75.75 0 010 1.5h-.5A.75.75 0 013 9.75zM7.75 9a.75.75 0 000 1.5h.5a.75.75 0 000-1.5h-.5zM7 6.75A.75.75 0 017.75 6h.5a.75.75 0 010 1.5h-.5A.75.75 0 017 6.75zM7.75 3a.75.75 0 000 1.5h.5a.75.75 0 000-1.5h-.5z"/></svg>
                         <span class="org">
                             ${data.org}
                         </span>
                     </li>
                     <li class="other show-md" data-content="${data.location}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-location" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.536 3.464a5 5 0 010 7.072L8 14.07l-3.536-3.535a5 5 0 117.072-7.072v.001zm1.06 8.132a6.5 6.5 0 10-9.192 0l3.535 3.536a1.5 1.5 0 002.122 0l3.535-3.536zM8 9a2 2 0 100-4 2 2 0 000 4z"/></svg>
                         <span class="location">
                             ${data.location}
                         </span>
                     </li>
                     <li class="other show-md" data-content="${data.twitterUsername}">
                         <a class="twitter" href="#" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -4 24 24" width="16" height="16" preserveAspectRatio="xMinYMin" class="icon jam jam-twitter"><path d='M20 1.907a8.292 8.292 0 0 1-2.356.637A4.07 4.07 0 0 0 19.448.31a8.349 8.349 0 0 1-2.607.98A4.12 4.12 0 0 0 13.846.015c-2.266 0-4.103 1.81-4.103 4.04 0 .316.036.625.106.92A11.708 11.708 0 0 1 1.393.754a3.964 3.964 0 0 0-.554 2.03c0 1.403.724 2.64 1.824 3.363A4.151 4.151 0 0 1 .805 5.64v.05c0 1.958 1.415 3.591 3.29 3.963a4.216 4.216 0 0 1-1.08.141c-.265 0-.522-.025-.773-.075a4.098 4.098 0 0 0 3.832 2.807 8.312 8.312 0 0 1-5.095 1.727c-.332 0-.658-.02-.979-.056a11.727 11.727 0 0 0 6.289 1.818c7.547 0 11.673-6.157 11.673-11.496l-.014-.523A8.126 8.126 0 0 0 20 1.907z' /></svg>
                             ${data.twitterUsername}
                         </a>
                     </li>
                 </ul>
                 <div class="stats">
                     <a href="#" class="stat followers">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-people" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z"/></svg>
                         <span class="txt-bold" data-content="${data.followers.totalCount}">
                             ${data.followers.totalCount}
                         </span>
@@ -210,6 +215,7 @@ const populateProfile = ({ container, loader }, data) => {
                     </a>
                     ·
                     <a href="#" class="stat stars" data-content="${data.starredRepositories.totalCount}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-icon" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/></svg>
                         <span class="txt-bold">
                             ${data.starredRepositories.totalCount}
                         </span>
@@ -248,13 +254,20 @@ const populateRepos = ({ container, loader }, data) => {
                             <span class="color" style="background: ${safe(repo.primaryLanguage).color}"></span>
                             ${safe(repo.primaryLanguage).name}
                         </span>
-                        <span class="stars"> ${repo.stargazerCount}</span>
-                        <span class="forks"> ${repo.forkCount}</span>
-                        <span class="last-update">Updated 4 hours ago </span>
+                        <span class="stars"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-star" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/></svg>
+                        ${repo.stargazerCount}
+                        </span>
+                        <span class="forks">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-repo-forked" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
+                            ${repo.forkCount}
+                        </span>
+                        <span class="last-update">Updated ${repo.updatedAt} </span>
                     </div>
                 </header>
                 <div class="repo__action">
                     <button class="star-btn btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-star" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/></svg>
                         Star
                     </button>
                 </div>
@@ -313,14 +326,14 @@ const getUser = (username) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer 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"
+                "Authorization": "Bearer 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"
             },
             body: JSON.stringify({
                 query: `
                     {
                         user(login: "${login}") {
                             name
-                            repositories(first: 5) {
+                            repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 5) {
                             nodes {
                                 description
                                 name
@@ -368,7 +381,7 @@ const getUser = (username) => {
                 data = data.data.user;
                 console.log(data)
                 populateElements("#profile-container", "#repos-container", data);
-                showError({status: "success", msg: `Success! ✨  Rendering data for ${login}`})
+                showNotif({status: "success", msg: `Success! ✨  Rendering data for <b>${login}</b>`})
 
                 // get repoCount
                 let repoCount = data.repositories.totalCount;
@@ -376,7 +389,7 @@ const getUser = (username) => {
             })
             .catch(err => {
                 console.log(err);
-                showError({status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev`})
+                showNotif({status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev`})
                 populateElements("#profile-container", "#repos-container", dummy);
                 // get repoCount
                 let repoCount = dummy.repositories.totalCount;
