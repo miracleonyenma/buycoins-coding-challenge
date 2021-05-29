@@ -96,6 +96,8 @@ let dummy = {
     "status": null
 }
 
+let navBtn = document.querySelector("#nav-btn");
+
 
 // HELPER FUNCTIONS
 
@@ -118,14 +120,14 @@ const safe = (data) => {
     return safeData
 }
 // custom error handler
-const showNotif = ({status = "err", msg = "Oops.. Something went wrong"})=>{
+const showNotif = ({ status = "err", msg = "Oops.. Something went wrong" }) => {
     let notifBubble = document.querySelector("#notif-bubble");
     let msgTemplate = /*html*/`<span> ${msg} </span>`
-    replaceElement(msgTemplate, {elementParent: notifBubble, oldElement: notifBubble.firstElementChild})
+    replaceElement(msgTemplate, { elementParent: notifBubble, oldElement: notifBubble.firstElementChild })
     status == "err" ? notifBubble.classList.add("err") : notifBubble.classList.add("success");
     notifBubble.classList.add("active")
-    
-    setTimeout(()=>{
+
+    setTimeout(() => {
         notifBubble.classList.remove("active")
         notifBubble.classList.remove(status)
     }, 6000)
@@ -147,7 +149,13 @@ const populateCustom = (selector, data) => {
     el.textContent = data;
 };
 
+// nav button function
+const toogleNav = (target, activeClass) => {
+    target = document.querySelector(target);
+    target.classList.toggle(activeClass);
+}
 
+navBtn.addEventListener("click", () => { toogleNav("#site-nav", "active") })
 
 // populate profile
 const populateProfile = ({ container, loader }, data) => {
@@ -254,12 +262,12 @@ const populateRepos = ({ container, loader }, data) => {
                             <span class="color" style="background: ${safe(repo.primaryLanguage).color}"></span>
                             ${safe(repo.primaryLanguage).name}
                         </span>
-                        <span class="stars"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-star" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/></svg>
-                        ${repo.stargazerCount}
+                        <span class="stars" data-content="${repo.stargazerCount}"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-star" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/></svg>
+                            ${repo.stargazerCount}
                         </span>
-                        <span class="forks">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-repo-forked" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
+                        <span class="forks" data-content="${repo.forkCount}">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-repo-forked" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
                             ${repo.forkCount}
                         </span>
                         <span class="last-update">Updated ${repo.updatedAt} </span>
@@ -326,14 +334,14 @@ const getUser = (username) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer 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"
+                "Authorization": "Bearer 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"
             },
             body: JSON.stringify({
                 query: `
                     {
                         user(login: "${login}") {
                             name
-                            repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 5) {
+                            repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 20) {
                             nodes {
                                 description
                                 name
@@ -377,24 +385,26 @@ const getUser = (username) => {
                 `
             })
         }).then(res => res.json())
-            .then(data => {
-                data = data.data.user;
-                console.log(data)
-                populateElements("#profile-container", "#repos-container", data);
-                showNotif({status: "success", msg: `Success! ✨  Rendering data for <b>${login}</b>`})
+        .then(data => {
+            data = data.data.user;
+            console.log(data)
+            populateElements("#profile-container", "#repos-container", data);
+            showNotif({ status: "success", msg: `Success! ✨  Rendering data for <b>${login}</b>` })
 
-                // get repoCount
-                let repoCount = data.repositories.totalCount;
-                populateCustom("#repoCount", repoCount);
-            })
-            .catch(err => {
-                console.log(err);
-                showNotif({status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev`})
-                populateElements("#profile-container", "#repos-container", dummy);
-                // get repoCount
-                let repoCount = dummy.repositories.totalCount;
-                populateCustom("#repoCount", repoCount);
-            })
+            // get repoCount
+            let repoCount = data.repositories.totalCount;
+            populateCustom("#repoCount", repoCount);
+            let userImg = document.querySelector("#user-img");
+            userImg.setAttribute("src", data.avatarUrl)
+        })
+        .catch(err => {
+            console.log(err);
+            showNotif({ status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev` })
+            populateElements("#profile-container", "#repos-container", dummy);
+            // get repoCount
+            let repoCount = dummy.repositories.totalCount;
+            populateCustom("#repoCount", repoCount);
+        })
     }
 
     return {
@@ -408,7 +418,7 @@ searchBtn.addEventListener("click", (e) => {
     // get input
     let error = getUser(input.value);
     console.log(error);
-    !error.status ? input.value = "" : null
+    // !error.status ? input.value = "ireade" : input.value
 });
 
 input.addEventListener("keyup", (e) => {
@@ -418,3 +428,14 @@ input.addEventListener("keyup", (e) => {
         searchBtn.click();
     }
 });
+
+
+document.addEventListener("readystatechange", e => {
+    if (e.target.readyState == "complete") {
+        // get window params
+        let params = new URLSearchParams(window.location.search);
+        let username = params.get("username").toLowerCase();
+
+        let error = getUser(username);
+    }
+})
