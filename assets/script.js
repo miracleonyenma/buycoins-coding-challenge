@@ -165,11 +165,11 @@ const parseDate = (dateString) => {
     let date = new Date(dateString);
     let currentDate = new Date();
 
-    console.log(date);
-    console.log({date: date.valueOf(), currentDate: currentDate.valueOf()});
+    // console.log(date);
+    // console.log({date: date.valueOf(), currentDate: currentDate.valueOf()});
 
     let secondsElapsed = currentDate.valueOf() - date.valueOf();
-    console.log(secondsElapsed);
+    // console.log(secondsElapsed);
 
     const sec = 1000, min = sec * 60, hr = min * 60, day = hr * 24, wk = day * 7, mon = day * 30, yr = mon * 12
     let inSecs = Math.round(secondsElapsed / sec), inMins = Math.round(secondsElapsed / min), inHrs = Math.round(secondsElapsed / hr), inDays = Math.round(secondsElapsed / day), inWks = Math.round(secondsElapsed / wk), inMons = Math.round(secondsElapsed / mon), inYrs = Math.round(secondsElapsed / yr);
@@ -190,7 +190,7 @@ const getToken = () => {
         method: "GET",
     }).then(res => res.json())
     .then(data => {
-        alert(data);
+        console.log(data);
         return data.token
     }).catch(err => {
         console.log(err);
@@ -372,7 +372,13 @@ const populateElements = (profileParent, repoParent, data) => {
 }
 
 // get user info
-const getUser = (username) => {
+const getUser = async (username) => {
+
+    let tokenRes = await fetch('https://buycoins-challenge-miracleio.netlify.app/.netlify/functions/token');
+    let token = await tokenRes.json();
+
+    // console.log(token.token);
+
     let error = {
         status: false,
         msg: "It's alright"
@@ -395,12 +401,12 @@ const getUser = (username) => {
             oldElement: repoCont.firstElementChild
         });
 
-
+        
         fetch('https://api.github.com/graphql', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer " + getToken()
+                "Authorization": "Bearer " + token.token
             },
             body: JSON.stringify({
                 query: `
