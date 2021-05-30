@@ -185,6 +185,17 @@ const parseDate = (dateString) => {
     if (secondsElapsed > yr) return `${date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear()}`
 }
 
+const getToken = () => {
+    fetch("https://buycoins-challenge-miracleio.netlify.app/.netlify/functions/token", {
+        method: "GET",
+    }).then(res => res.json())
+    .then(data => {
+        alert(data);
+        return data
+    })
+}
+
+
 // GLOBAL TEMPLATES
 
 // loader template
@@ -386,7 +397,7 @@ const getUser = (username) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer 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"
+                "Authorization": "Bearer " + getToken()
             },
             body: JSON.stringify({
                 query: `
