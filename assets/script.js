@@ -3,13 +3,13 @@ let dummy = {
     "repositories": {
         "nodes": [
             {
-                "description": "A free theme for Jekyll",
-                "name": "bitsofcode-jekyll",
-                "url": "https://github.com/ireade/bitsofcode-jekyll",
-                "updatedAt": "2021-05-28T09:10:34Z",
-                "id": "MDEwOlJlcG9zaXRvcnkzNTcyODk3Ng==",
-                "forkCount": 0,
-                "stargazerCount": 2,
+                "description": "SSA CDS Extended 2021 Web Capabilities Codelab",
+                "name": "cdsx-web-capabilities-codelab",
+                "url": "https://github.com/ireade/cdsx-web-capabilities-codelab",
+                "updatedAt": "2021-02-13T19:52:25Z",
+                "id": "MDEwOlJlcG9zaXRvcnkzMzc1Mzg0ODM=",
+                "forkCount": 8,
+                "stargazerCount": 5,
                 "primaryLanguage": {
                     "name": "CSS",
                     "id": "MDg6TGFuZ3VhZ2UzMDg=",
@@ -17,27 +17,69 @@ let dummy = {
                 }
             },
             {
-                "description": "A hackable css form reset",
-                "name": "formhack",
-                "url": "https://github.com/ireade/formhack",
-                "updatedAt": "2021-05-28T07:46:15Z",
-                "id": "MDEwOlJlcG9zaXRvcnkzNDQ4MTIxNg==",
-                "forkCount": 22,
-                "stargazerCount": 345,
+                "description": "Blockchain Nanodegree Project 1 -  Create Your Own Private Blockchain",
+                "name": "nd1309-private-blockchain",
+                "url": "https://github.com/ireade/nd1309-private-blockchain",
+                "updatedAt": "2020-12-19T07:53:11Z",
+                "id": "MDEwOlJlcG9zaXRvcnkxOTk1MjgxMzI=",
+                "forkCount": 3,
+                "stargazerCount": 10,
                 "primaryLanguage": {
-                    "name": "CSS",
-                    "id": "MDg6TGFuZ3VhZ2UzMDg=",
-                    "color": "#563d7c"
+                    "name": "JavaScript",
+                    "id": "MDg6TGFuZ3VhZ2UxNDA=",
+                    "color": "#f1e05a"
                 }
             },
             {
-                "description": "A simple JS and jQuery game of tic tac toe",
-                "name": "tictactoe",
-                "url": "https://github.com/ireade/tictactoe",
-                "updatedAt": "2021-05-27T20:35:48Z",
-                "id": "MDEwOlJlcG9zaXRvcnkyNDk4Mzk3MQ==",
-                "forkCount": 12,
-                "stargazerCount": 15,
+                "description": null,
+                "name": "ireaderinokun.com",
+                "url": "https://github.com/ireade/ireaderinokun.com",
+                "updatedAt": "2021-04-29T20:32:48Z",
+                "id": "MDEwOlJlcG9zaXRvcnk0OTYzNzg3MA==",
+                "forkCount": 8,
+                "stargazerCount": 21,
+                "primaryLanguage": {
+                    "name": "HTML",
+                    "id": "MDg6TGFuZ3VhZ2U0MTc=",
+                    "color": "#e34c26"
+                }
+            },
+            {
+                "description": null,
+                "name": "caniuse-embed-api",
+                "url": "https://github.com/ireade/caniuse-embed-api",
+                "updatedAt": "2021-01-31T17:35:28Z",
+                "id": "MDEwOlJlcG9zaXRvcnkxNTgzNDUzNzE=",
+                "forkCount": 1,
+                "stargazerCount": 24,
+                "primaryLanguage": {
+                    "name": "JavaScript",
+                    "id": "MDg6TGFuZ3VhZ2UxNDA=",
+                    "color": "#f1e05a"
+                }
+            },
+            {
+                "description": "📊 Embed realtime data from caniuse.com",
+                "name": "caniuse-embed",
+                "url": "https://github.com/ireade/caniuse-embed",
+                "updatedAt": "2021-05-08T11:41:36Z",
+                "id": "MDEwOlJlcG9zaXRvcnk0OTcxNDkwOQ==",
+                "forkCount": 14,
+                "stargazerCount": 258,
+                "primaryLanguage": {
+                    "name": "JavaScript",
+                    "id": "MDg6TGFuZ3VhZ2UxNDA=",
+                    "color": "#f1e05a"
+                }
+            },
+            {
+                "description": "Blockchain Nanodegree Project 3 - Ethereum Dapp for Tracking Items through Supply Chain",
+                "name": "nd1309-supply-chain",
+                "url": "https://github.com/ireade/nd1309-supply-chain",
+                "updatedAt": "2021-02-28T15:39:49Z",
+                "id": "MDEwOlJlcG9zaXRvcnkyMDMzOTU2NTE=",
+                "forkCount": 3,
+                "stargazerCount": 13,
                 "primaryLanguage": {
                     "name": "JavaScript",
                     "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -57,28 +99,14 @@ let dummy = {
                     "id": "MDg6TGFuZ3VhZ2UxNDA=",
                     "color": "#f1e05a"
                 }
-            },
-            {
-                "description": "A simple demo application of Web Push Notifications with Firebase",
-                "name": "simply-notify",
-                "url": "https://github.com/ireade/simply-notify",
-                "updatedAt": "2021-05-26T23:22:49Z",
-                "id": "MDEwOlJlcG9zaXRvcnkxMDM1MTA2MDE=",
-                "forkCount": 61,
-                "stargazerCount": 121,
-                "primaryLanguage": {
-                    "name": "JavaScript",
-                    "id": "MDg6TGFuZ3VhZ2UxNDA=",
-                    "color": "#f1e05a"
-                }
             }
         ],
-        "totalCount": 131
+        "totalCount": 123
     },
     "bio": "Frontend Developer and User Interface Designer",
     "avatarUrl": "https://avatars.githubusercontent.com/u/8677283?s=300&u=e350a331a44b704f86f56dca07ee44f1bc5675bb&v=4",
     "followers": {
-        "totalCount": 2586
+        "totalCount": 2585
     },
     "following": {
         "totalCount": 28
@@ -107,9 +135,9 @@ const replaceElement = (newTemplate, { elementParent: elementParent, oldElement:
     if (template) {
         newElement = document.createRange().createContextualFragment(newTemplate);
     }
-    console.log(elementParent);
-    console.log(oldElement);
-    console.log(newElement);
+    // console.log(elementParent);
+    // console.log(oldElement);
+    // console.log(newElement);
     oldElement ? elementParent.replaceChild(newElement, oldElement) : null;
 }
 // return "safe" obj
@@ -131,6 +159,30 @@ const showNotif = ({ status = "err", msg = "Oops.. Something went wrong" }) => {
         notifBubble.classList.remove("active")
         notifBubble.classList.remove(status)
     }, 6000)
+}
+// parse date
+const parseDate = (dateString) => {
+    let date = new Date(dateString);
+    let currentDate = new Date();
+
+    console.log(date);
+    console.log({date: date.valueOf(), currentDate: currentDate.valueOf()});
+
+    let secondsElapsed = currentDate.valueOf() - date.valueOf();
+    console.log(secondsElapsed);
+
+    const sec = 1000, min = sec * 60, hr = min * 60, day = hr * 24, wk = day * 7, mon = day * 30, yr = mon * 12
+    let inSecs = Math.round(secondsElapsed / sec), inMins = Math.round(secondsElapsed / min), inHrs = Math.round(secondsElapsed / hr), inDays = Math.round(secondsElapsed / day), inWks = Math.round(secondsElapsed / wk), inMons = Math.round(secondsElapsed / mon), inYrs = Math.round(secondsElapsed / yr);
+    let months = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec" 
+    ]
+    if (secondsElapsed <= min) return `${inSecs} seconds ago`
+    if (secondsElapsed <= hr) return `${inMins} ${inMins > 1 ? "minutes ago" : "minute ago"}`
+    if (secondsElapsed <= day) return `${inHrs} ${inHrs > 1 ? "hours ago" : "hour ago"}`
+    if (secondsElapsed <= mon) return `${inDays > 1 ? `${inDays} days ago` : "yesterday"}`
+    // if (secondsElapsed <= mon) return `${inWks > 1 ? `${inWks} weeks ago` : "last week"}`
+    if (secondsElapsed <= yr) return `${date.getDate() + " " + months[date.getMonth()]}`
+    if (secondsElapsed > yr) return `${date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear()}`
 }
 
 // GLOBAL TEMPLATES
@@ -200,7 +252,7 @@ const populateProfile = ({ container, loader }, data) => {
                         </span>
                     </li>
                     <li class="other show-md" data-content="${data.twitterUsername}">
-                        <a class="twitter" href="#" target="_blank" rel="noopener noreferrer">
+                        <a class="twitter" href="https://twitter.com/${data.twitterUsername}" target="_blank" rel="noopener noreferrer">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -4 24 24" width="16" height="16" preserveAspectRatio="xMinYMin" class="icon jam jam-twitter"><path d='M20 1.907a8.292 8.292 0 0 1-2.356.637A4.07 4.07 0 0 0 19.448.31a8.349 8.349 0 0 1-2.607.98A4.12 4.12 0 0 0 13.846.015c-2.266 0-4.103 1.81-4.103 4.04 0 .316.036.625.106.92A11.708 11.708 0 0 1 1.393.754a3.964 3.964 0 0 0-.554 2.03c0 1.403.724 2.64 1.824 3.363A4.151 4.151 0 0 1 .805 5.64v.05c0 1.958 1.415 3.591 3.29 3.963a4.216 4.216 0 0 1-1.08.141c-.265 0-.522-.025-.773-.075a4.098 4.098 0 0 0 3.832 2.807 8.312 8.312 0 0 1-5.095 1.727c-.332 0-.658-.02-.979-.056a11.727 11.727 0 0 0 6.289 1.818c7.547 0 11.673-6.157 11.673-11.496l-.014-.523A8.126 8.126 0 0 0 20 1.907z' /></svg>
                             ${data.twitterUsername}
                         </a>
@@ -239,7 +291,7 @@ const populateProfile = ({ container, loader }, data) => {
 
 // populate repos
 const populateRepos = ({ container, loader }, data) => {
-    let repos = data.repositories.nodes;
+    let repos = data.repositories.nodes.reverse();
     let newRepoList = document.createElement("ul");
     newRepoList.classList.add("repos");
 
@@ -270,7 +322,7 @@ const populateRepos = ({ container, loader }, data) => {
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon octicon-repo-forked" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/></svg>
                             ${repo.forkCount}
                         </span>
-                        <span class="last-update">Updated ${repo.updatedAt} </span>
+                        <span class="last-update">Updated ${parseDate(repo.updatedAt)}</span>
                     </div>
                 </header>
                 <div class="repo__action">
@@ -284,7 +336,7 @@ const populateRepos = ({ container, loader }, data) => {
         newRepoList.insertAdjacentHTML('afterbegin', repoTemplate);
     });
 
-    console.log(newRepoList);
+    // console.log(newRepoList);
 
     // replace repos element
     replaceElement(newRepoList, { elementParent: container, oldElement: loader }, false)
@@ -341,7 +393,7 @@ const getUser = (username) => {
                     {
                         user(login: "${login}") {
                             name
-                            repositories(orderBy: {field: UPDATED_AT, direction: DESC}, first: 20) {
+                            repositories(first: 20, orderBy: {field: PUSHED_AT, direction: DESC}, ownerAffiliations: OWNER) {
                             nodes {
                                 description
                                 name
@@ -385,26 +437,26 @@ const getUser = (username) => {
                 `
             })
         }).then(res => res.json())
-        .then(data => {
-            data = data.data.user;
-            console.log(data)
-            populateElements("#profile-container", "#repos-container", data);
-            showNotif({ status: "success", msg: `Success! ✨  Rendering data for <b>${login}</b>` })
+            .then(data => {
+                data = data.data.user;
+                console.log(data)
+                populateElements("#profile-container", "#repos-container", data);
+                showNotif({ status: "success", msg: `Success! ✨  Rendering data for <b>${login}</b>` })
 
-            // get repoCount
-            let repoCount = data.repositories.totalCount;
-            populateCustom("#repoCount", repoCount);
-            let userImg = document.querySelector("#user-img");
-            userImg.setAttribute("src", data.avatarUrl)
-        })
-        .catch(err => {
-            console.log(err);
-            showNotif({ status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev` })
-            populateElements("#profile-container", "#repos-container", dummy);
-            // get repoCount
-            let repoCount = dummy.repositories.totalCount;
-            populateCustom("#repoCount", repoCount);
-        })
+                // get repoCount
+                let repoCount = data.repositories.totalCount;
+                populateCustom("#repoCount", repoCount);
+                let userImg = document.querySelector("#user-img");
+                userImg.setAttribute("src", data.avatarUrl)
+            })
+            .catch(err => {
+                console.log(err);
+                showNotif({ status: "err", msg: `Unable to fetch data for <b>${login}</b>. Rendering fallback dummy data from our favorite dev` })
+                populateElements("#profile-container", "#repos-container", dummy);
+                // get repoCount
+                let repoCount = dummy.repositories.totalCount;
+                populateCustom("#repoCount", repoCount);
+            })
     }
 
     return {
@@ -417,7 +469,7 @@ const searchBtn = document.querySelector("#search-btn");
 searchBtn.addEventListener("click", (e) => {
     // get input
     let error = getUser(input.value);
-    console.log(error);
+    // console.log(error);
     // !error.status ? input.value = "ireade" : input.value
 });
 
