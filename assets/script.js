@@ -191,7 +191,10 @@ const getToken = () => {
     }).then(res => res.json())
     .then(data => {
         alert(data);
-        return data
+        return data.token
+    }).catch(err => {
+        console.log(err);
+        return null
     })
 }
 
